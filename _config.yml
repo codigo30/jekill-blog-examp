@@ -1,0 +1,43 @@
+# Jekyll Configuration
+title: Huellas de Barrio
+description: Grupo de investigación Medio Ambiente y Sociedad - MASO
+url: "https://popular-esmedellin.com"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Huellas de Barrio"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - package.json
+  - package-lock.json
+  - script.js
+
+# Pagination
+paginate: 6
+paginate_path: "/blog/page:num/"
